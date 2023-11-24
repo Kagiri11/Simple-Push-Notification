@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1050031998008",
+    "project_id": "notificationservice-4bac3",
+    "storage_bucket": "notificationservice-4bac3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1050031998008:android:ef3cc8d8163f843b7092cd",
+        "android_client_info": {
+          "package_name": "com.kagiri.pushnotificationclient"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrdhP9riF705GstScjKxgcSovFytzCnSQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
