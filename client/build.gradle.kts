@@ -1,8 +1,9 @@
 plugins {
     id("com.android.application")
-    id("org.jetbrains.kotlin.android")
+//    id("org.jetbrains.kotlin.android")
 }
 
+/*
 android {
     namespace = "com.kagiri.client"
     compileSdk = 32
@@ -45,4 +46,4 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("com.android.support.test:runner:1.0.2")
     androidTestImplementation("com.android.support.test.espresso:espresso-core:3.0.2")
-}
+}*/
