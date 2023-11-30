@@ -20,7 +20,7 @@ class NotificationService {
 
     fun sendNotificationToDevice(notificationRequest: NotificationRequest) {
         val message = getPreconfiguredMessageToToken(notificationRequest = notificationRequest)
-        val gson = GsonBuilder().setPrettyPrinting().create()
+        val gson = GsonBuilder().setLenient().setPrettyPrinting().create()
         val jsonString = gson.toJson(message)
         val response = sendMessage(message = message)
         logger.info("Sent message $jsonString to token: ${notificationRequest.token}, response was: $response")

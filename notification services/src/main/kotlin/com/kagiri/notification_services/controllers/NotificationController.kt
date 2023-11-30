@@ -18,6 +18,6 @@ class NotificationController(
     fun handleNotificationRequest(@RequestBody notificationRequest: NotificationRequest): ResponseEntity<NotificationResponse> {
         notificationService.sendNotificationToDevice(notificationRequest = notificationRequest)
 
-        return ResponseEntity.of(Optional.of(NotificationResponse(status = 200, message = "")))
+        return ResponseEntity.of(Optional.of(NotificationResponse(status = 200, message = "Notification request sent")))
     }
 }
