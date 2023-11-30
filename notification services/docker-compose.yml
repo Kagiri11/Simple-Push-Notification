@@ -1,0 +1,8 @@
+version: '3'
+services:
+  notification-service:
+    container_name: notification-service
+    build:
+      context: .
+    ports:
+      - "8089:8080"
