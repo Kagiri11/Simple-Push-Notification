@@ -16,8 +16,8 @@ class FirebaseCloudMessagingInitializer {
     @PostConstruct
     fun initialize() {
         try {
-            val credentials2 = GoogleCredentials.fromStream(FileInputStream(File("C:\\Users\\Charles Maina\\IdeaProjects\\SimplePushNotification\\notification services\\src\\main\\resources\\firebase-admin-sdk.json")))
-            val options = FirebaseOptions.Builder().setCredentials(credentials2).build()
+            val credentials = GoogleCredentials.fromStream(FileInputStream(File("C:\\Users\\Charles Maina\\IdeaProjects\\SimplePushNotification\\notification services\\src\\main\\resources\\firebase-admin-sdk.json")))
+            val options = FirebaseOptions.Builder().setCredentials(credentials).build()
             if (FirebaseApp.getApps().isEmpty()) {
                 FirebaseApp.initializeApp(options)
                 logger.info("Firebase application initialized")
