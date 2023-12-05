@@ -14,9 +14,9 @@ class FirebaseCloudMessagingInitializer {
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
     @PostConstruct
-    fun initialize() {
+    fun init() {
         try {
-            val credentials = GoogleCredentials.fromStream(FileInputStream(File("C:\\Users\\Charles Maina\\IdeaProjects\\SimplePushNotification\\notification services\\src\\main\\resources\\firebase-admin-sdk.json")))
+            val credentials = GoogleCredentials.fromStream(FileInputStream(File("path to firebase json")))
             val options = FirebaseOptions.Builder().setCredentials(credentials).build()
             if (FirebaseApp.getApps().isEmpty()) {
                 FirebaseApp.initializeApp(options)

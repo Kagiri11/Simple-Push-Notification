@@ -22,12 +22,8 @@ class NotificationService {
         val message = getPreconfiguredMessageToToken(notificationRequest = notificationRequest)
         val gson = GsonBuilder().setLenient().setPrettyPrinting().create()
         val jsonString = gson.toJson(message)
-        val response = sendMessage(message = message)
+        val response = FirebaseMessaging.getInstance().sendAsync(message).get()
         logger.info("Sent message $jsonString to token: ${notificationRequest.token}, response was: $response")
-    }
-
-    private fun sendMessage(message: Message): String? {
-        return FirebaseMessaging.getInstance().sendAsync(message).get()
     }
 
     private fun getPreconfiguredMessageToToken(notificationRequest: NotificationRequest): Message {
